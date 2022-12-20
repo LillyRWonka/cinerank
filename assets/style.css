@@ -3,3 +3,11 @@
     margin: 1em;
 }
 
+.title {
+    text-align: center;
+}
+
+.container {
+    padding: 20%;
+}
+

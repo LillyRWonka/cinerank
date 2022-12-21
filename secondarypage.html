@@ -3,34 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="assets/secondary.css">
     <title>Ratings Page</title>
 </head>
-<div class="titlebox">
-        <a href="index.html">Home Page</a>
-    <h1 class="title">Cine-Rank</h1>
-</div>
+
+<!-- credits to https://materializecss.com/navbar.html -->
+<nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center"><strong>Cine-Rank</strong></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="index.html">Home Page</a></li>
+      </ul>
+    </div>
+  </nav>
 
 <body>
-    <aside>
-        <div class="youtube-container">
-            <h3>Youtube Trailer</h3>
-        </div>
+<section class="left-box">
+    <div>
+            <!-- <div class="col s3"> -->
+            <h4>Youtube Trailer</h4>
         <!-- add Youtube watch box -->
-        <div class="recent-search"></div>
-        <h3>Recent Search History</h3>
-    </aside>
-
-<section>
-    <div class="big-box"></div>
-    <h3>Title of Movie</h3>
-    <!-- add display of IMDb rating -->
-    <h3>Title of Review</h3>
-    <input class="input" type="text" placeholder="Input">
-    <h3>Write your review here</h3>
-    <input class="review-input" type="text" placeholder="Write your review here">
+        </div>
 </section>
+
+<aside class="review-box">
+
+    <div>
+      <!-- displays name of the movie instead of having text -->
+        <h4>Title of Movie</h4>
+        <!-- add display of IMDb rating -->
+        <h4>Title of Review</h4>
+        <input class="input" type="text" placeholder="Input">
+        <h4>Write your review here</h4>
+        <textarea class="review-input" type="text" placeholder="Write your review here"></textarea>
+        </div>
+
+
+</aside>
+
+<section class="left-box">
+  <div>
+    <h4>Recent Search History</h4>
+  </div>
+
+</section>
+
+<!-- <section class="col s9">
+
+    <div>
+    <h4>Title of Movie</h4> -->
+    <!-- add display of IMDb rating -->
+    <!-- <h4>Title of Review</h4>
+    <input class="input" type="text" placeholder="Input">
+    <h4>Write your review here</h4>
+    <input class="review-input" type="text" placeholder="Write your review here">
+    </div> -->
+
+<!-- </section> -->
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 </body>
 </html>

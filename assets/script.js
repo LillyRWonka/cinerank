@@ -3,16 +3,16 @@ var goButton = document.getElementById("go-button");
 var title = ""
 var movie = inputSearch.value
 
-function renderTitle() {
-    fetch (`https://imdb-api.com/en/API/SearchMovie/k_f2lcoitr/${title}`)
-    .then(response=>{
+function renderTitle(event) {
+    var titleVal = inputSearch.value
+    fetch (`https://imdb-api.com/en/API/SearchMovie/k_f2lcoitr/${inputSearch}`)
+    .then(function (response) {
         return response.json();
-    })
-    .then(data =>
-        console.log(data));
-    // .catch(error => console.log(error))
-console.log(title);
-console.log(movie);
+      })
+      .then(function (data) {
+        console.log(data);
+      });
+    console.log(titleVal); //prints movie input 
 }
 goButton.addEventListener("click", renderTitle);
 renderTitle ();

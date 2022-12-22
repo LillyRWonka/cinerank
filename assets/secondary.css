@@ -1,31 +1,44 @@
 * {
-    background-color: rgb(149, 189, 224);
-    margin: 5px 
+    /* background-color: rgb(149, 189, 224); */
+    margin: 0%;
+    padding: 0%;
+
 }
   
-a {
-    float: right;
-}
-
-aside {
+.left-box {
     float: left;
-    width: 30%;
-    border: 1mm solid black;
-}
-section {
-    float: right;
-    width: 60%;
-    border: 1mm solid black;
+    padding: 20px;
+    padding-bottom: 300px;
+    text-align: center;
+    margin: 10px;
+    width: 32%;
+    border: salmon solid;
+    background-color: salmon;
 }
 
-.titlebox {
-    border: 1mm solid black;
-    width: 99%;
-    
+.review-box {
+    float: right;
+    margin: 10px;
+    text-align: center;
+    width: 65%;
+    border: salmon solid;
+    padding: 40px;
+    padding-bottom: 457px;
 }
-.title {
+
+input {
+    width: 70%;
+    text-align: center;
+}
+
+.review-input {
+    width: 70%;
+    padding-bottom: 400px;
+}
+
+.brand-logo center {
     text-align: center;
     font-size: 80px;  
     padding: 3%;
-}
+} 
 

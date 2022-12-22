@@ -1,11 +1,11 @@
 var inputSearch = document.getElementById("input");
 var goButton = document.getElementById("go-button");
-var title = ""
 var movie = inputSearch.value
 
 function renderTitle(event) {
     var titleVal = inputSearch.value
-    fetch (`https://imdb-api.com/en/API/SearchMovie/k_f2lcoitr/${inputSearch}`)
+    var apiKey = "k_n85bma6f" //limit of 100 calls per day, alternative apiKey=k_f2lcoitr
+    fetch (`https://imdb-api.com/en/API/SearchMovie/${apiKey}/${titleVal}`) 
     .then(function (response) {
         return response.json();
       })
@@ -17,11 +17,8 @@ function renderTitle(event) {
 goButton.addEventListener("click", renderTitle);
 renderTitle ();
 
-
 //stores the string in the variable, completes a fetch request with the search result
 //when go is clicked, complete a fetch request and console log the movie title
-
-renderTitle ();
 
 // goButton.addEventListener ("click", projectMovie);
 

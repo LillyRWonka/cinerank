@@ -4,37 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="assets/style.css">
     <title>Cine-Rank</title>
 </head>
+
 <body>
-    <div class="container">
+    <div id="search-box">
     <h1 class="title">Cine-Rank</h1>
-    <h2 class="subtitle">A movie-goers favorite new website. Your one stop spot where you can share your own review, view what others have posted, and navigate back through your own movie viewing search history.
-      </h2>
+    <p class="subtitle">A movie-goers favorite new website. 
+      Your one stop spot where you can share your own review, 
+      view what others have posted, and navigate back through 
+      your own movie viewing search history. </p>
     <div class="field">
-        <div class="control">
-          <input id="input" class="input" type="text" placeholder="Input">
+          <input id="input" class="input" type="text" placeholder="Type a movie">
           <p> You can also SearchMovie with year (ex: "Inception 2010")</p>
-        </div>
-      </div>
-    <div class="field">
-      </div>
-   <a href="secondarypage.html"> 
-    <button id="go-button" class="button is-medium is-rounded">
-        Go
-      </button> </a> 
+    <button id="go-button" class="button is-medium is-rounded"> Go </button> 
+    </div>
     </div>
 
-    <footer class="footer">
+    <section id="left-box">
+      <div> <h4>Youtube Trailer</h4> 
+        <!-- add Youtube watch box -->
+     </div>
+  </section>
+
+  <section id="bottom-left-box">
+    <div>
+      <h4>Recent Search History</h4>
+    </div>
+  </section>
+  
+  <aside id="review-box">
+      <div>
+        <!-- displays name of the movie instead of having text -->
+          <h4>Input textbox of Title of Movie</h4>
+          <!-- add display of IMDb rating -->
+          <textarea id=IMDb-review readonly></textarea>
+          <input class="input" type="text" placeholder="Input">
+          <h4>Write your review here</h4>
+          <textarea class="review-input" type="text" placeholder="Write your review here"></textarea>
+          </div>
+  </aside>
+  
+    <!-- <footer class="footer">
         <div class="content has-text-centered">
           <p>
             <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
             <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
           </p>
         </div>
-      </footer>
+      </footer> -->
       <script src="assets/script.js"></script>
 </body>
 </html>

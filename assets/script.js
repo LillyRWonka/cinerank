@@ -28,7 +28,7 @@ function renderTitle(event) {
         return response.json();
       })
       .then(function (data) {
-        console.log("THE DATA", data); 
+        console.log("THE DATA!", data); 
       });
     //   data.searchtype
     console.log(titleVal); //prints movie input 

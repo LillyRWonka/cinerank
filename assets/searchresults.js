@@ -1,5 +1,5 @@
 var resultTextEl = document.querySelector('#result-title');
-var resultContentEl = document.querySelector('#result-rating');
+var resultContentEl = document.querySelector('#result-content');
 var searchFormEl = document.querySelector('#search-form');
 
 function getParams() {

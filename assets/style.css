@@ -4,11 +4,45 @@
 }
 
 .title {
-    text-align: center;
     font-size: 80px;
 }
 
-.container {
+#search-box {
     padding: 15%;
+    text-align: center;
+    color: white;
+}
+
+#left-box,
+#bottom-left-box {
+    float: left;
+    padding: 20px;
+    padding-bottom: 300px;
+    text-align: center;
+    margin: 10px;
+    width: 25%;
+    border: black solid;
+    background-color: white;
+}
+
+#review-box {
+    float: right;
+    margin: 10px;
+    text-align: center;
+    width: 40%;
+    border: black solid;
+    padding: 40px;
+    padding-bottom: 457px;
+    background-color: white;
+}
+
+input {
+    width: 70%;
+    text-align: center;
+}
+
+.review-input {
+    width: 70%;
+    padding-bottom: 200px;
 }
 

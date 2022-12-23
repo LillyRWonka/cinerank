@@ -1,4 +1,4 @@
-var inputSearch = document.getElementById("input");
+var inputSearch = document.querySelector("input");
 var goButton = document.getElementById("go-button");
 var movie = inputSearch.value
 

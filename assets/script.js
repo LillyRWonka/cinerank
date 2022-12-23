@@ -3,6 +3,8 @@ var goButton = document.getElementById("go-button");
 var movie = inputSearch.value
 
 function renderTitle(event) {
+  event.preventDefault();
+
     var titleVal = inputSearch.value
     var apiKey = "k_n85bma6f" //limit of 100 calls per day, alternative apiKey=k_f2lcoitr
     fetch (`https://imdb-api.com/en/API/SearchMovie/${apiKey}/${titleVal}`) 
@@ -13,9 +15,20 @@ function renderTitle(event) {
         console.log(data);
       });
     console.log(titleVal); //prints movie input 
+    if (!titleVal) {
+      console.error('You need a search input value!');
+      return;
+    }
+
+    var queryString = './secondarypage.html?q=' + titleVal;
+
+    location.assign(queryString);
+
 }
-goButton.addEventListener("click", renderTitle);
-renderTitle ();
+goButton.addEventListener('click', renderTitle);
+// renderTitle ();
+
+
 
 //stores the string in the variable, completes a fetch request with the search result
 //when go is clicked, complete a fetch request and console log the movie title

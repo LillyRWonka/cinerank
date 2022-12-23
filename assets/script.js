@@ -1,4 +1,4 @@
-var inputSearch = document.getElementById("input");
+var inputSearch = document.querySelector("input");
 var goButton = document.getElementById("go-button");
 
 //adds dynamtic HTML 
@@ -16,6 +16,8 @@ reviewBoxEl.textContent = 'Review of Movie'
 // leftBoxEl.appendChild(myDiv);
 
 function renderTitle(event) {
+  event.preventDefault();
+
     var titleVal = inputSearch.value
     var apiKey = "k_f2lcoitr" //limit of 100 calls per day, alternative apiKey=k_n85bma6f
     fetch (`https://imdb-api.com/en/API/SearchMovie/${apiKey}/${titleVal}`) 
@@ -30,7 +32,15 @@ function renderTitle(event) {
       });
     //   data.searchtype
     console.log(titleVal); //prints movie input 
-    console.log()
+    if (!titleVal) {
+      console.error('You need a search input value!');
+      return;
+    }
+
+    var queryString = './secondarypage.html?q=' + titleVal;
+
+    location.assign(queryString);
+
 }
 goButton.addEventListener("click", renderTitle);
 renderTitle ();

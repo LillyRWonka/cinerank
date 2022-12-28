@@ -69,20 +69,26 @@ function renderTitle(event) {
     }
 }
 
+//the function is called with a button click, user calls the function//
 goButton.addEventListener("click", renderTitle);
+
+function saveUserReview(){
+    var titleboxEl = document.getElementById("title-box").value;
+    var reviewUser = document.getElementById("review-box").value;
+    localStorage.setItem("title",titleboxEl);
+    localStorage.setItem("review",reviewUser);
+    submitButton.textContent = "Response received."
+    // document.getElementById("title-box").value = localStorage.getItem('title');
+    document.getElementById("review-box").value = localStorage.getItem('review');
+}
+
+submitButton.addEventListener("click",saveUserReview);
 
 // function renderTitleAndReview(){
 //     renderTitle()
 //     renderReviewbox()
 // }
 
-// function renderReviewbox(event){
-//     bottomleftBoxEl.innerHTML = "Write your own review here" + "<br>" + 
-//     "<form> <label>Title of Review:</label>" + "<br>" + "<input>" + "<br> </input>"
-//     + "<br>" + "<textarea>Insert review here</textarea>" + "<br>" + "<button>Submit Review</button>"
-// }
-
-//the function is called with a button click, user calls the function//
 
 //stores the string in the variable, completes a fetch request with the search result
 //when go is clicked, complete a fetch request and console log the movie title

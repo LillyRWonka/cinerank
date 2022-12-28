@@ -1,5 +1,6 @@
 var inputSearch = document.querySelector("input");
 var goButton = document.getElementById("go-button");
+var submitButton = document.getElementById("submit-button");
 
 //adds dynamtic HTML 
 var searchBoxEl = document.getElementById("search-box");
@@ -10,7 +11,6 @@ const myDiv = document.createElement("div");
 var movie = inputSearch.value
 
 leftBoxEl.textContent = 'Name of Movie'
-bottomleftBoxEl.innerHTML = 'User Review' + ""
 reviewBoxEl.textContent = 'Review of Movie'
 
 function renderTitle(event) {
@@ -31,8 +31,8 @@ function renderTitle(event) {
         const image = document.createElement("img")
         image.setAttribute("src",imgUrl);
         // image.setAttribute() to get the sizing of the image
-        image.setAttribute('width',183);
-        image.setAttribute('height',183);
+        image.setAttribute('width',220);
+        image.setAttribute('height',300);
         // changed from textcontent to innerHTML 
         leftBoxEl.innerHTML = "Movie Title: " + title + "<br>" + "Description: " + description;
         leftBoxEl.appendChild(image);
@@ -56,7 +56,7 @@ function renderTitle(event) {
         const content = data.items[0].content
         // console.log('Title of Review: ' + data.items[0].title)
         // console.log('Review Content: ' + data.items[0].content)
-        reviewBoxEl.innerHTML = "IMBd Review Title: " + title + "<br>" + "Date of Review: " 
+        reviewBoxEl.innerHTML = "IMBd Review Title: " + title + "<br>" + "Date of Review: " +
         + date + "<br>" + "Rating: " + rate + "<br>" + "Warning Spoiler: " + warningSpoilers +
         "<br>" + "Title of Review: " + title + "<br>" + "Review: " + content})
         })
@@ -69,16 +69,18 @@ function renderTitle(event) {
     }
 }
 
-goButton.addEventListener("click", renderTitleAndReview);
+goButton.addEventListener("click", renderTitle);
 
-function renderTitleAndReview(){
-    renderTitle()
-    renderReviewbox()
-}
+// function renderTitleAndReview(){
+//     renderTitle()
+//     renderReviewbox()
+// }
 
-function renderReviewbox(event){
-    bottomleftBoxEl.innerHTML = "Write your own review here" + "<br>" 
-}
+// function renderReviewbox(event){
+//     bottomleftBoxEl.innerHTML = "Write your own review here" + "<br>" + 
+//     "<form> <label>Title of Review:</label>" + "<br>" + "<input>" + "<br> </input>"
+//     + "<br>" + "<textarea>Insert review here</textarea>" + "<br>" + "<button>Submit Review</button>"
+// }
 
 //the function is called with a button click, user calls the function//
 

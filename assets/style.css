@@ -1,4 +1,5 @@
-* {
+head,
+body {
     background-color: rgb(149, 189, 224);
     margin: 1em;
 }
@@ -13,14 +14,13 @@
     color: white;
 }
 
-#left-box,
-#bottom-left-box {
+#left-box {
     float: left;
     padding: 20px;
-    padding-bottom: 300px;
+    padding-bottom: 30px;
     text-align: center;
     margin: 10px;
-    width: 25%;
+    width: 35%;
     border: black solid;
     background-color: white;
 }
@@ -29,14 +29,14 @@
     float: right;
     margin: 10px;
     text-align: center;
-    width: 42%;
+    width: 59%;
     border: black solid;
     padding: 20px;
-    padding-bottom: 457px;
+    padding-bottom: 193px;
     background-color: white;
 }
 
-input {
+.input {
     width: 50%;
     text-align: center;
     color: white;
@@ -44,6 +44,28 @@ input {
 
 .review-input {
     width: 70%;
-    padding-bottom: 200px;
+    padding-bottom: 100px;
 }
 
+#bottom-left-box{
+    float: left;
+    padding: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+    margin: 10px;
+    width: 35%;
+    border: black solid;
+    background-color: white;
+}
+
+h4, 
+form,
+label {
+    font: Arial; 
+    font-size: 14px;
+    color: black;
+}
+
+textarea {
+    padding-bottom: 250px;
+}

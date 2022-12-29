@@ -8,22 +8,18 @@ var leftBoxEl = document.getElementById("left-box");
 var bottomleftBoxEl = document.getElementById("bottom-left-box");
 var reviewBoxEl = document.getElementById("review-box");
 const myDiv = document.createElement("div");
+var hintEl = document.getElementById("hint")
 var movie = inputSearch.value
 
 leftBoxEl.textContent = 'Name of Movie'
 reviewBoxEl.textContent = 'Review of Movie'
 
-function renderTitle(event) {
-    // console.log('IN THE RENDER TITLE FUNCTION')
+function renderMovie(event) {
     var titleVal = inputSearch.value
     var apiKey = "k_n85bma6f" //limit of 100 calls per day, alternative apiKey=k_n85bma6f, k_f2lcoitr
     fetch (`https://imdb-api.com/en/API/SearchMovie/${apiKey}/${titleVal}`) 
     .then(res => res.json()) 
     .then(data => {
-        // console.log('ATTEMPTING TO RENDER TITLE')
-        // console.log('THE DATA!',data)
-        // console.log('TITLE: ', data.results[0].title)
-        // console.log('IMAGE LINK: ', data.results[0].image)
         const title = data.results[0].title
         const description = data.results[0].description
         console.log(description)
@@ -37,57 +33,48 @@ function renderTitle(event) {
         leftBoxEl.innerHTML = "Movie Title: " + title + "<br>" + "Description: " + description + "<br>" + "<br>";
         leftBoxEl.appendChild(image);
         const idEl = data.results[0].id
+    
     //causes the review from IMDb to be displayed on the website//
     fetch (`https://imdb-api.com/en/API/Reviews/${apiKey}/${idEl}`)
         .then(resp=>{
         return resp.json();
         })
         .then(data=>{
-        // console.log(data);
-        // console.log('Spoiler alert: ' + data.items[0].warningSpoilers)
-        // console.log('Date of Review: ' + data.items[0].date)
-        // console.log('Rating: ' + data.items[0].rate)
-        // console.log('Title of Review: ' + data.items[0].title)
-        // console.log('Review Content: ' + data.items[0].content)
         const warningSpoilers = data.items[0].warningSpoilers
         const date = data.items[0].date
         const rate = data.items[0].rate
         const title = data.items[0].title
         const content = data.items[0].content
-        // console.log('Title of Review: ' + data.items[0].title)
-        // console.log('Review Content: ' + data.items[0].content)
         reviewBoxEl.innerHTML = "IMBd Review Title: " + title + "<br>" + "Date of Review: " +
         + date + "<br>" + "Rating: " + rate + "<br>" + "Warning Spoiler: " + warningSpoilers +
-        "<br>" + "Title of Review: " + title + "<br>" + "Review: " + content})
+        "<br>" + "<br>" + "Title of Review: " + title + "<br>" + "Review: " + content})
         })
-
-// leftBoxEl.textContent = data.results.title[0]
+    
     console.log(titleVal); //prints movie input 
-    if (!titleVal) {
+    if (titleVal=="") {
       console.error('You need a search input value!');
+      hintEl.textContent = "You need a search input value!"
       return;
     }
 }
 
 //the function is called with a button click, user calls the function//
-goButton.addEventListener("click", renderTitle);
+goButton.addEventListener("click", renderMovie);
 
 function saveUserReview(){
     var titleboxEl = document.getElementById("title-box").value;
-    var reviewUser = document.getElementById("review-box").value;
+    var reviewUser = document.getElementById("review-user").value;
+    console.log(reviewUser);
+
     localStorage.setItem("title",titleboxEl);
     localStorage.setItem("review",reviewUser);
     submitButton.textContent = "Response received."
     // document.getElementById("title-box").value = localStorage.getItem('title');
-    document.getElementById("review-box").value = localStorage.getItem('review');
+    document.getElementById("review-box").value = localStorage.setItem('review',reviewUser);
+    console.log(reviewUser);
 }
 
 submitButton.addEventListener("click",saveUserReview);
-
-// function renderTitleAndReview(){
-//     renderTitle()
-//     renderReviewbox()
-// }
 
 
 //stores the string in the variable, completes a fetch request with the search result

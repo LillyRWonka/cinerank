@@ -34,7 +34,7 @@ function renderTitle(event) {
         image.setAttribute('width',220);
         image.setAttribute('height',300);
         // changed from textcontent to innerHTML 
-        leftBoxEl.innerHTML = "Movie Title: " + title + "<br>" + "Description: " + description;
+        leftBoxEl.innerHTML = "Movie Title: " + title + "<br>" + "Description: " + description + "<br>" + "<br>";
         leftBoxEl.appendChild(image);
         const idEl = data.results[0].id
     //causes the review from IMDb to be displayed on the website//
@@ -96,3 +96,7 @@ submitButton.addEventListener("click",saveUserReview);
 //TO DO
 //set attribute in height to change search box in css - omit padding
 //take out console logs and put comments instead to clean up code
+//get review textbox to be the the correct width
+//fix submit button and keep at the bottom of the box
+//fix local storage for review textbox
+//add a statement below submit button to say the response team will get back to you...

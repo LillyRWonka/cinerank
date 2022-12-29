@@ -12,27 +12,17 @@
 <body>
     <div id="search-box">
     <h1 class="title">Cine-Rank</h1>
-    <p class="subtitle">A movie-goers favorite new website. 
-      Your one stop spot where you can share your own review, 
-      view what others have posted, and navigate back through 
-      your own movie viewing search history. </p>
+    <p class="subtitle">A movie-goer's favorite new website. 
+      Your one-stop spot where you can share your own rating, 
+      view movie facts, and read through published reviews from the IMDb database.</p>
     <div class="field">
           <input id="input" class="input" type="text" placeholder="Type a movie">
           <p> You can also SearchMovie with year (ex: "Inception 2010")</p>
-    <button id="go-button" class="button is-medium is-rounded"> Go </button> 
-    </div>
-    </div>
+  <!-- uses materialize css -->
+  <a id="go-button" class="waves-effect waves-light btn">Search</a>
+    </div></div>
 
     <section id="left-box">
-      <div> <h4>Youtube Trailer</h4> 
-        <!-- add Youtube watch box -->
-     </div>
-  </section>
-
-  <section id="bottom-left-box">
-    <div>
-      <h4>Recent Search History</h4>
-    </div>
   </section>
   
   <aside id="review-box">
@@ -46,15 +36,32 @@
           <textarea class="review-input" type="text" placeholder="Write your review here"></textarea>
           </div>
   </aside>
-  
-    <!-- <footer class="footer">
-        <div class="content has-text-centered">
-          <p>
-            <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
-          </p>
+
+   <section id="bottom-left-box">
+    <div>
+      <h4>User's Personal Review</h4>
+      <form>
+        <label for="moviename">Title:</label>
+        <br>
+        <input id="title-box" type="text" name="moviename>">
+        <br>
+        <label for="user-review">Review:</label>
+        <br>
+        <textarea id="review-box" placeholder="Type review"></textarea>
+        <a id="submit-button" class="waves-effect waves-light btn">Submit</a>
+      </form>
+    </div>
+  </section>
+
+    <!-- uses materialize css -->
+    <!-- <footer class="page-footer">
+      <div class="footer-copyright">
+        <div class="container">
+        <p>Made with<strong>Materialize</strong> by <a href="https://materializecss.com/"></a>
+        <a class="grey-text text-lighten-4 right" href="http://opensource.org/licenses/mit-license.php">MIT</a>
         </div>
-      </footer> -->
+      </div>
+    </footer> -->
       <script src="assets/script.js"></script>
 </body>
 </html>

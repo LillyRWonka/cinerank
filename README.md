@@ -7,11 +7,18 @@ Cinerank is a new movie information and review application that allows users to 
 ## Usage
 To search for a movie, locate the textbox under the main title of the page to type the name of the movie you would like to view. The user can also provide the year that the movie was released for a more accurate search. When the user clicks on the green search button, the page will load and contain a row of 3 boxes that contain the information of the movie, user's own review input, and a published IMDb review pulled from the IMDb website.
 
-## Technologies Used 
+## Credits/Technologies Used 
 Materialize CSS 
-IMDb Search Movies Api
-IMDb Reviews Api
+https://materializecss.com/
+
+IMDb Search Movies API
+https://imdb-api.com/api/#Search-header
+
+IMDb Reviews API
+https://imdb-api.com/api/#Reviews-header
 
 ### Screenshot of Webpage 
+![alt text](images/searchpage.png)
+![alt text](images/informationratings.png)
 
 ### Link to Deloyed Webpage

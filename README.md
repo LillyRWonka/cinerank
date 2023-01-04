@@ -22,3 +22,4 @@ https://imdb-api.com/api/#Reviews-header
 ![alt text](images/informationratings.png)
 
 ### Link to Deloyed Webpage
+https://lillyrwonka.github.io/cinerank/

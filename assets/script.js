@@ -24,7 +24,6 @@ function renderMovie(event) {
     .then(data => {
         const title = data.results[0].title
         const description = data.results[0].description
-        console.log(description)
         const imgUrl = data.results[0].image
         const image = document.createElement("img")
         //changes the movie poster to a specified size
